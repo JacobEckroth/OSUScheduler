@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <title>GiveMeOldScheduler</title>
+        <link rel="stylesheet" href="style.css">
+       
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <script src="script.js" charset="utf-8" defer></script>
+    </head>
+    <body>
+     <h1> SCHEDULER(Jacob's version)</h1>
+     <h2>Feel free to not change any of these settings, in fact changing too many might be bad for you.</h2>
+     <form id="entryForm">
+        <label for="className">Class Name You Want To Add To Schedule (example: CS325)</label>
+        <input type = "text" id="className" name="className"<br><br><br>
+
+        <label for="termSelector">Choose a term:</label>
+        <select name="termSelector" id="termSelector">
+          <option value="any">Any</option>
+          <option value="Fa">Fall</option>
+          <option value="Wi">Winter</option>
+          <option value="Sp">Spring</option>
+          <option value="Su">Summer</option>
+        </select><br><br>
+        <label for="subjectSelector">Subject:</label>
+        <select name="subjectSelector" id="subjectSelector">
+            <option value="any">Any Subject</option>
+            <option value="AAE">AAE - Aeronautical &amp; Astronaut. Eng.</option>
+            <option value="ACTG">ACTG - Accounting</option>
+            <option value="AEC">AEC - Applied Economics</option>
+            <option value="AED">AED - Agricultural Education</option>
+            <option value="AG">AG - Agriculture-General</option>
+            <option value="AGRI">AGRI - Agricultural Sci, College of</option>
+            <option value="AHE">AHE - Adult Ed &amp; Higher Ed Leadershp</option>
+            <option value="AJ">AJ - Applied Journalism</option>
+            <option value="ALS">ALS - Academic Learning Services</option>
+            <option value="AMS">AMS - American Studies Program</option>
+            <option value="ANS">ANS - Animal Sciences</option>
+            <option value="ANTH">ANTH - Anthropology</option>
+            <option value="ARAB">ARAB - Arabic</option>
+            <option value="ARE">ARE - Architectural Engineering</option>
+            <option value="ART">ART - Art</option>
+            <option value="AS">AS - Aerospace Studies</option>
+            <option value="ASL">ASL - American Sign Language</option>
+            <option value="ASN">ASN - Asian Languages and Cultures</option>
+            <option value="ATS">ATS - Atmospheric Sciences</option>
+            <option value="BA">BA - Business Administration</option>
+            <option value="BB">BB - Biochemistry and Biophysics</option>
+            <option value="BDS">BDS - Biological Data Sciences</option>
+            <option value="BEE">BEE - Biological &amp; Ecological Engr</option>
+            <option value="BHS">BHS - BioHealth Sciences</option>
+            <option value="BI">BI - Biology</option>
+            <option value="BIOE">BIOE - Biological Engineering</option>
+            <option value="BOT">BOT - Botany and Plant Pathology</option>
+            <option value="BRR">BRR - Bioresource Research</option>
+            <option value="CBEE">CBEE - Chem, Bio, Enviro Engineering</option>
+            <option value="CCE">CCE - Civil and Construction Engr</option>
+            <option value="CE">CE - Civil Engineering</option>
+            <option value="CEM">CEM - Construction Engineering Mngmt</option>
+            <option value="CH">CH - Chemistry</option>
+            <option value="CHE">CHE - Chemical Engineering</option>
+            <option value="CHN">CHN - Chinese</option>
+            <option value="COMM">COMM - Communication</option>
+            <option value="COUN">COUN - Counseling</option>
+            <option value="CROP">CROP - Crop Science</option>
+            <option value="CS">CS - Computer Science</option>
+            <option value="CSS">CSS - Crop &amp; Soil Science</option>
+            <option value="CSSA">CSSA - College Student Services Admin</option>
+            <option value="DHE">DHE - Design and Human Environment</option>
+            <option value="DSGN">DSGN - Design</option>
+            <option value="EAH">EAH - Environmental Arts &amp;Humanities</option>
+            <option value="ECE">ECE - Electrical &amp; Computer Engineer</option>
+            <option value="ECON">ECON - Economics</option>
+            <option value="ED">ED - Education</option>
+            <option value="ENG">ENG - English</option>
+            <option value="ENGR">ENGR - Engineering Science</option>
+            <option value="ENSC">ENSC - Environmental Sciences</option>
+            <option value="ENT">ENT - Entomology</option>
+            <option value="ENVE">ENVE - Environmental Engineering</option>
+            <option value="ES">ES - Ethnic Studies</option>
+            <option value="ESC">ESC - Science of Engineering</option>
+            <option value="ESE">ESE - Energy Systems Engineering</option>
+            <option value="FCSJ">FCSJ - Food in Culture,Social Justice</option>
+            <option value="FE">FE - Forest Engineering</option>
+            <option value="FES">FES - Forest Ecosystems and Society</option>
+            <option value="FILM">FILM - Film Studies</option>
+            <option value="FIN">FIN - Finance</option>
+            <option value="FOR">FOR - Forestry</option>
+            <option value="FR">FR - French</option>
+            <option value="FST">FST - Food Science and Technology</option>
+            <option value="FW">FW - Fisheries and Wildlife</option>
+            <option value="GD">GD - Graphic Design</option>
+            <option value="GEO">GEO - Geosciences</option>
+            <option value="GEOG">GEOG - Geography</option>
+            <option value="GER">GER - German</option>
+            <option value="GPH">GPH - Geophysics</option>
+            <option value="GRAD">GRAD - Graduate Education</option>
+            <option value="GS">GS - General Science</option>
+            <option value="H">H - Public Health</option>
+            <option value="HC">HC - Honors College</option>
+            <option value="HDFS">HDFS - Human Dev and Family Sciences</option>
+            <option value="HEBR">HEBR - Hebrew</option>
+            <option value="HEST">HEST - Humanitarian Engr Sci &amp; Tech</option>
+            <option value="HHS">HHS - Health and Human Sciences</option>
+            <option value="HM">HM - Hospitality Management</option>
+            <option value="HORT">HORT - Horticulture</option>
+            <option value="HST">HST - History</option>
+            <option value="HSTS">HSTS - History of Science</option>
+            <option value="IAWS">IAWS - Integrated Agriculture and Wildland Science </option>
+            <option value="IB">IB - Integrative Biology</option>
+            <option value="IE">IE - Industrial and Mfg Engineering</option>
+            <option value="IEPA">IEPA - Intensive English Pgm Acad Eng</option>
+            <option value="IEPG">IEPG - Interim English Program General English</option>
+            <option value="IEPH">IEPH - Interim English Program General English</option>
+            <option value="INTL">INTL - International Degree</option>
+            <option value="IST">IST - Interdisciplinary Programs</option>
+            <option value="IT">IT - Italian</option>
+            <option value="JCUO">JCUO - JCUO</option>
+            <option value="JPN">JPN - Japanese</option>
+            <option value="KIN">KIN - Kinesiology</option>
+            <option value="KOR">KOR - Korean</option>
+            <option value="LA">LA - Liberal Arts</option>
+            <option value="LAT">LAT - Latin</option>
+            <option value="LEAD">LEAD - Leadership</option>
+            <option value="LIB">LIB - Library &amp; Information Science</option>
+            <option value="LING">LING - Linguistics</option>
+            <option value="LS">LS - Liberal Studies</option>
+            <option value="MAST">MAST - Marine Studies</option>
+            <option value="MATS">MATS - Materials Science</option>
+            <option value="MB">MB - Microbiology</option>
+            <option value="MCB">MCB - Molecular &amp; Cellular Biology</option>
+            <option value="ME">ME - Mechanical Engineering</option>
+            <option value="MFGE">MFGE - Manufacturing Engineering</option>
+            <option value="MGMT">MGMT - Management</option>
+            <option value="MIME">MIME - Mech/Ind/Mfg Engineering</option>
+            <option value="MNR">MNR - Master of Natural Resources</option>
+            <option value="MPP">MPP - Master of Public Policy</option>
+            <option value="MRKT">MRKT - Marketing</option>
+            <option value="MRM">MRM - Marine Resource Management</option>
+            <option value="MS">MS - Military Science</option>
+            <option value="MTH">MTH - Mathematics</option>
+            <option value="MUED">MUED - Music Education</option>
+            <option value="MUP">MUP - Music (Studio)</option>
+            <option value="MUS">MUS - Music</option>
+            <option value="NMC">NMC - New Media Communications</option>
+            <option value="NR">NR - Natural Resources</option>
+            <option value="NS">NS - Naval Science</option>
+            <option value="NSE">NSE - Nuclear Science &amp; Engineering</option>
+            <option value="NUR">NUR - Nursing</option>
+            <option value="NUTR">NUTR - Nutrition</option>
+            <option value="OC">OC - Oceanography</option>
+            <option value="ODKU">ODKU - ODKU</option>
+            <option value="OEAS">OEAS - Ocean Earth &amp; Atmospheric Sci</option>
+            <option value="OFOR">OFOR - OFOR</option>
+            <option value="OP">OP - Outdoor Products</option>
+            <option value="OSAR">OSAR - OSAR</option>
+            <option value="PAC">PAC - Physical Activity Courses</option>
+            <option value="PAX">PAX - Peace Studies</option>
+            <option value="PBG">PBG - Plant Breeding &amp; Genetics</option>
+            <option value="PH">PH - Physics</option>
+            <option value="PHAR">PHAR - Pharmacy</option>
+            <option value="PHL">PHL - Philosophy</option>
+            <option value="PPOL">PPOL - Public Policy</option>
+            <option value="PS">PS - Political Science</option>
+            <option value="PSM">PSM - Professional Science Masters</option>
+            <option value="PSY">PSY - Psychology</option>
+            <option value="PT">PT - Physical Therapy</option>
+            <option value="QS">QS - Queer Studies</option>
+            <option value="REL">REL - Religious Studies</option>
+            <option value="RNG">RNG - Rangeland Ecology &amp; Management</option>
+            <option value="ROB">ROB - Robotics</option>
+            <option value="RS">RS - Rural Studies</option>
+            <option value="RUS">RUS - Russian</option>
+            <option value="SCI">SCI - Science</option>
+            <option value="SE">SE - Software Engineering</option>
+            <option value="SED">SED - Science &amp; Mathematics Educ</option>
+            <option value="SNR">SNR - Sustainable Natural Resources</option>
+            <option value="SOC">SOC - Sociology</option>
+            <option value="SOIL">SOIL - Soil Science</option>
+            <option value="SPAN">SPAN - Spanish</option>
+            <option value="SSCI">SSCI - Social Science</option>
+            <option value="ST">ST - Statistics</option>
+            <option value="SUS">SUS - Sustainability</option>
+            <option value="TA">TA - Theatre Arts</option>
+            <option value="TOX">TOX - Toxicology</option>
+            <option value="TRAL">TRAL - Tourism, Recreat, Adven. Lead.</option>
+            <option value="UEXP">UEXP - University Experience</option>
+            <option value="VMB">VMB - Veterinary Medicine Biomedical</option>
+            <option value="VMC">VMC - Veterinary Medicine Clinical</option>
+            <option value="WGSS">WGSS - Women, Gender, and Sexuality</option>
+            <option value="WLC">WLC - World Languages and Cultures</option>
+            <option value="WR">WR - Written English</option>
+            <option value="WRE">WRE - Water Resources Engineering</option>
+            <option value="WRP">WRP - Water Resources Policy and Mgt</option>
+            <option value="WRS">WRS - Water Resources Science</option>
+            <option value="WSE">WSE - Wood Science and Engineering</option>
+            <option value="Z">Z - Zoology</option>
+          </select><br><br>
+
+        <label for="campusSelector">Campus: </label>
+        <select name="campusSelector" id="campusSelector">
+          <option value="any">Any Campus</option>
+          <option value="ecampus">Ecampus-Online</option>
+          <option value="corvallis">Corvallis</option>
+          <option value="cascades">Cascades</option>
+
+        </select><br><br>
+        
+        <button id="addToSchedule" type="button">Add To Schedule</button>
+        <div id="classesHolder"></div>
+
+        <canvas id="calendar" width="700px" height="1200px"></canvas>  <!--change this later -->
+
+
+      </form>
+
+    </body>
+
+
+</html>
