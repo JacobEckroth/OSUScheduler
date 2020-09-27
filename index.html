@@ -14,7 +14,7 @@
     <body>
      <h1> SCHEDULER(Jacob's version)</h1>
      <h2>Feel free to not change any of these settings, in fact changing too many might be bad for you.</h2>
-     <form id="entryForm">
+     <form onSubmit = "return false;" id="entryForm">
         <label for="className">Class Name You Want To Add To Schedule (example: CS325)</label>
         <input type = "text" id="className" name="className"<br><br><br>
 
@@ -203,21 +203,28 @@
 
         <label for="campusSelector">Campus: </label>
         <select name="campusSelector" id="campusSelector">
+          <option value="corvallis">Corvallis</option>
           <option value="any">Any Campus</option>
           <option value="ecampus">Ecampus-Online</option>
-          <option value="corvallis">Corvallis</option>
+         
           <option value="cascades">Cascades</option>
 
         </select><br><br>
         
-        <button id="addToSchedule" type="button">Add To Schedule</button>
-        <div id="classesHolder"></div>
-
-        <canvas id="calendar" width="700px" height="1200px"></canvas>  <!--change this later -->
-
+       
 
       </form>
-
+      <button id="addToSchedule" type="button">Add To Schedule</button>
+      <div id="classesHolder"></div>
+      <button id="generateSchedules" type = "button">Generate Schedules</button>
+     
+      <button id="prevSchedule" type = "button">Previous Schedule</button>
+      <button id="nextSchedule" type = "button">Next Schedule</button>
+      <p id = "possibleSchedules">Possible Schedules: </p>
+      <p id = "scheduleNumber"> Schedule Number: </p>
+      
+      <canvas id="calendar" width="700px" height="800px"></canvas>  <!--change this later -->
+      
     </body>
 
 

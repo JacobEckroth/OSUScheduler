@@ -52,16 +52,16 @@ app.get("/classRequest/:className/:term/:subject/:campus", function (req, res) {
         case 'any':
             url += '&srcdb=999999';
             break;
-        case 'summer':
+        case 'Su':
             url += '&srcdb=202100';
             break;
-        case 'fall':
+        case 'Fa':
             url += '&srcdb=202101';
             break;
-        case 'winter':
+        case 'Wi':
             url += '&srcdb=202102';
             break;
-        case 'spring':
+        case 'Sp':
             url += 'srcdb=202103';
             break;
         default:
@@ -120,14 +120,17 @@ function getData(url,res,term) {
 
         //let bodyHTML =  await page.evaluate(()=>  document.querySelector('.panel__body').innerHTML);
         const optionsArray = await page.evaluate(() => [...document.querySelectorAll('.result')].map(elem => elem.innerHTML));
-        optionsArray.pop(); //there's some useless info at the end of the options array.
-       
+        if(optionsArray.length> 1){
+         optionsArray.pop(); //there's some useless info at the end of the options array.
+        }
 
         // console.log(bodyHTML);
         // res.send(bodyHTML);
         // console.log("DONE")
         await browser.close();
+        
         var newData = makeDataUsable(optionsArray,term);
+ 
         var jsonData = JSON.stringify(newData);
         res.status(200);
         console.log("Sending data");
