@@ -30,6 +30,7 @@ function addNewClass() {
     request.open('GET', url);
     request.send();
     request.addEventListener('load', function (event) {
+        alert("Got Response for Class: " + className);
         console.log("got response");
         var results = JSON.parse(request.response);
 
@@ -64,15 +65,9 @@ function showNewClass() {
     individualHolder.appendChild(classNameP);
     individualHolder.appendChild(deleteButton);
     classesHolder.appendChild(individualHolder);
-
-
-
     deleteButton.id = className + "-deleteButton";
     deleteButton.textContent = "Remove";
     deleteButton.height = "100%";
-
-
-
 
 
 }

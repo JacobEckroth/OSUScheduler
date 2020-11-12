@@ -5,5 +5,7 @@
 .className{
     padding-right:10px;
 }
-
+*{
+    font-family: 'Roboto', sans-serif;
+}
 
